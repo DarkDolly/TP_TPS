@@ -16,9 +16,13 @@ class TP_TPS_API AAIControllerBase : public AAIController
 	
 public:
 
+	virtual void BeginPlay() override;
+
 	AAIControllerBase(const FObjectInitializer& ObjectInitializer);
 
 	virtual void OnPossess(APawn* InPawn) override;
+
+	class ACharacterBase* Agent;
 
 	UPROPERTY(transient)
 	class UBehaviorTreeComponent* BTC;
@@ -28,5 +32,6 @@ public:
 
 	// Blackboard Key IDs
 	uint8 EnemyKeyId;
-
+	uint8 LocationKeyId;
+	uint8 ContactKeyId;
 };

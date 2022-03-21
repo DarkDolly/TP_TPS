@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AI")
 	class UBehaviorTree* TreeAsset;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AI")
+	class ASmartObject* SmartObject;
+
 	UPROPERTY(BlueprintReadOnly, Category = "Animation")
 	FAnimValues AnimValues;
 
